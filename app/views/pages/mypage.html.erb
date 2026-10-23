@@ -1,0 +1,15 @@
+<h2>マイページ画面</h2>
+
+<table border="1" style="border-collapse: collapse; width: 100%; max-width: 500px; text-align: left;">
+  <tr>
+    <th style="padding: 5px; width: 30%;">名前</th>
+    <td style="padding: 5px;"><%= @user.name %></td>
+  </tr>
+  <tr>
+    <th style="padding: 5px;">メールアドレス</th>
+    <td style="padding: 5px;"><%= @user.email %></td>
+  </tr>
+</table>
+
+<br />
+<%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %>
